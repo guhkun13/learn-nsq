@@ -15,6 +15,8 @@ var MachineIds = []string{
 	"d4:24:8l",
 }
 
+const MachineId = "a1:01:0g"
+
 var CompressionIds = []string{
 	"comp-1",
 	"comp-2",
@@ -74,7 +76,10 @@ var JobIds = []string{
 var CompressorIds = []string{
 	"comp-1",
 	"comp-2",
+	"comp-3",
 }
+
+const CompressorId = "comp-1"
 
 var OriginalSizes = []float64{
 	100.111,
@@ -112,7 +117,8 @@ var CompressedDurations = []float64{
 	9.999,
 }
 
-var CompressedRatios = []float64{
+var SavingSpacePercentages = []float64{
+	39.333,
 	49.444,
 	59.555,
 	69.666,

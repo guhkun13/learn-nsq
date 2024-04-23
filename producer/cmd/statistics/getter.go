@@ -86,10 +86,10 @@ func getRandomCompressedDurationStr(val float64) string {
 	return fmt.Sprintf("%.2f", val)
 }
 
-func getRandomCompressedRatio() string {
-	countItems := len(CompressedRatios)
+func getRandomSavingSpacePercentage() string {
+	countItems := len(SavingSpacePercentages)
 	randomIdx := getRandomIndex(countItems - 1)
-	val := CompressedRatios[randomIdx]
+	val := SavingSpacePercentages[randomIdx]
 
 	return fmt.Sprintf("%.2f", val)
 }
@@ -103,32 +103,35 @@ func getTimestamp(addedSecond int) string {
 func generatePayload() Payload {
 	randomJobId := getRandomJobId()
 	randomUserId := getRandomUserId()
-	randomMachineId := getRandomMachineId()
 	randomCompressionId := getRandomCompressionId()
-	randomCompressorId := getRandomCompressorId()
 	randomOriginalSize := getRandomOrizinalSize()
 	randomCompressedSize := getRandomCompressedsize()
 	randomCompressedDurationFloat := getRandomCompressedDurationFloat()
 	randomCompressedDurationStr := getRandomCompressedDurationStr(randomCompressedDurationFloat)
 	randomCompressedDurationInt := getRandomCompressedDurationInt(randomCompressedDurationFloat)
-	randomCompressedRatio := getRandomCompressedRatio()
+	randomSavingSpacePercentage := getRandomSavingSpacePercentage()
+
+	// randomMachineId := getRandomMachineId()
+	// randomCompressorId := getRandomCompressorId()
+	fixedMachineId := MachineId
+	fixedCompressorId := CompressorId
 
 	return Payload{
-		JobId:              randomJobId,
-		TaskId:             generateId(),
-		UserId:             randomUserId,
-		CompressionId:      randomCompressionId,
-		MachineId:          randomMachineId,
-		CompressorId:       randomCompressorId,
-		Filename:           "test.mp4",
-		FormatFile:         "mp4",
-		OriginalSize:       randomOriginalSize,
-		CompressedSize:     randomCompressedSize,
-		CompressedDuration: randomCompressedDurationStr,
-		CompressedRatio:    randomCompressedRatio,
-		StartedAt:          getTimestamp(0),
-		FinishedAt:         getTimestamp(randomCompressedDurationInt),
-		Timestamp:          getTimestamp(0),
+		JobId:                 randomJobId,
+		TaskId:                generateId(),
+		UserId:                randomUserId,
+		CompressionId:         randomCompressionId,
+		MachineId:             fixedMachineId,
+		CompressorId:          fixedCompressorId,
+		Filename:              "test.mp4",
+		FormatFile:            "mp4",
+		OriginalSize:          randomOriginalSize,
+		CompressedSize:        randomCompressedSize,
+		CompressedDuration:    randomCompressedDurationStr,
+		SavingSpacePercentage: randomSavingSpacePercentage,
+		StartedAt:             getTimestamp(0),
+		FinishedAt:            getTimestamp(randomCompressedDurationInt),
+		Timestamp:             getTimestamp(0),
 	}
 
 }

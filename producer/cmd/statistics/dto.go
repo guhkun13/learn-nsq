@@ -1,21 +1,21 @@
 package statistics
 
 type Payload struct {
-	JobId              string `json:"job_id"`
-	TaskId             string `json:"task_id"`
-	UserId             string `json:"user_id"`
-	CompressionId      string `json:"compression_id"`
-	MachineId          string `json:"machine_id"`
-	CompressorId       string `json:"compressor_id"`
-	Filename           string `json:"filename"`
-	FormatFile         string `json:"format_file"`
-	OriginalSize       string `json:"original_size"`
-	CompressedSize     string `json:"compressed_size"`
-	CompressedDuration string `json:"compressed_duration"`
-	CompressedRatio    string `json:"compressed_ratio"`
-	StartedAt          string `json:"started_at"`
-	FinishedAt         string `json:"finished_at"`
-	Timestamp          string `json:"timestamp"`
+	JobId                 string `json:"job_id"`
+	TaskId                string `json:"task_id"`
+	UserId                string `json:"user_id"`
+	CompressionId         string `json:"compression_id"`
+	MachineId             string `json:"machine_id"`
+	CompressorId          string `json:"compressor_id"`
+	Filename              string `json:"filename"`
+	FormatFile            string `json:"format_file"`
+	OriginalSize          string `json:"original_size"`
+	CompressedSize        string `json:"compressed_size"`
+	CompressedDuration    string `json:"compressed_duration"`
+	SavingSpacePercentage string `json:"saving_space_percentage"`
+	StartedAt             string `json:"started_at"`
+	FinishedAt            string `json:"finished_at"`
+	Timestamp             string `json:"timestamp"`
 }
 
 // {
