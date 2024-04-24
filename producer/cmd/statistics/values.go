@@ -117,7 +117,7 @@ var CompressedDurations = []float64{
 	9.999,
 }
 
-var SavingSpacePercentages = []float64{
+var SpaceSavingPercentages = []float64{
 	39.333,
 	49.444,
 	59.555,

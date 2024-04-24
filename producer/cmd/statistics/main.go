@@ -9,8 +9,8 @@ import (
 	"github.com/nsqio/go-nsq"
 )
 
-const delay = time.Millisecond * 5
-const maxIteration = 1000
+const delay = time.Millisecond * 10
+const maxIteration = 10000
 const topic = "compression_statistics"
 const ip = "127.0.0.1"
 const port = 4150

@@ -12,7 +12,7 @@ type Payload struct {
 	OriginalSize          string `json:"original_size"`
 	CompressedSize        string `json:"compressed_size"`
 	CompressedDuration    string `json:"compressed_duration"`
-	SavingSpacePercentage string `json:"saving_space_percentage"`
+	SpaceSavingPercentage string `json:"space_saving_percentage"`
 	StartedAt             string `json:"started_at"`
 	FinishedAt            string `json:"finished_at"`
 	Timestamp             string `json:"timestamp"`

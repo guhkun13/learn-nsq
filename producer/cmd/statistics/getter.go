@@ -86,10 +86,10 @@ func getRandomCompressedDurationStr(val float64) string {
 	return fmt.Sprintf("%.2f", val)
 }
 
-func getRandomSavingSpacePercentage() string {
-	countItems := len(SavingSpacePercentages)
+func getRandomSpaceSavingPercentage() string {
+	countItems := len(SpaceSavingPercentages)
 	randomIdx := getRandomIndex(countItems - 1)
-	val := SavingSpacePercentages[randomIdx]
+	val := SpaceSavingPercentages[randomIdx]
 
 	return fmt.Sprintf("%.2f", val)
 }
@@ -109,7 +109,7 @@ func generatePayload() Payload {
 	randomCompressedDurationFloat := getRandomCompressedDurationFloat()
 	randomCompressedDurationStr := getRandomCompressedDurationStr(randomCompressedDurationFloat)
 	randomCompressedDurationInt := getRandomCompressedDurationInt(randomCompressedDurationFloat)
-	randomSavingSpacePercentage := getRandomSavingSpacePercentage()
+	randomSpaceSavingPercentage := getRandomSpaceSavingPercentage()
 
 	// randomMachineId := getRandomMachineId()
 	// randomCompressorId := getRandomCompressorId()
@@ -128,7 +128,7 @@ func generatePayload() Payload {
 		OriginalSize:          randomOriginalSize,
 		CompressedSize:        randomCompressedSize,
 		CompressedDuration:    randomCompressedDurationStr,
-		SavingSpacePercentage: randomSavingSpacePercentage,
+		SpaceSavingPercentage: randomSpaceSavingPercentage,
 		StartedAt:             getTimestamp(0),
 		FinishedAt:            getTimestamp(randomCompressedDurationInt),
 		Timestamp:             getTimestamp(0),
