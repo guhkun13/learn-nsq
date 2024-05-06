@@ -96,7 +96,7 @@ func getRandomSpaceSavingPercentage() string {
 
 func getTimestamp(addedSecond int) string {
 	currentTime := time.Now().Add(time.Second * time.Duration(addedSecond))
-	layoutFormat := time.RFC3339
+	layoutFormat := time.DateTime
 	return currentTime.Format(layoutFormat)
 }
 
