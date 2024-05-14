@@ -94,10 +94,8 @@ func getRandomSpaceSavingPercentage() string {
 	return fmt.Sprintf("%.2f", val)
 }
 
-func getTimestamp(addedSecond int) string {
-	currentTime := time.Now().Add(time.Second * time.Duration(addedSecond))
-	layoutFormat := time.DateTime
-	return currentTime.Format(layoutFormat)
+func getTimestamp(addedSecond int) time.Time {
+	return time.Now().Add(time.Second * time.Duration(addedSecond)).UTC()
 }
 
 func generatePayload() Payload {

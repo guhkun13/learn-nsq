@@ -8,4 +8,7 @@ require (
 	github.com/oklog/ulid/v2 v2.1.0
 )
 
-require github.com/golang/snappy v0.0.1 // indirect
+require (
+	github.com/golang/snappy v0.0.1 // indirect
+	github.com/relvacode/iso8601 v1.4.0 // indirect
+)

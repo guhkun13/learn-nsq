@@ -1,21 +1,23 @@
 package statistics
 
+import "time"
+
 type Payload struct {
-	JobId                 string `json:"job_id"`
-	TaskId                string `json:"task_id"`
-	UserId                string `json:"user_id"`
-	CompressionId         string `json:"compression_id"`
-	MachineId             string `json:"machine_id"`
-	CompressorId          string `json:"compressor_id"`
-	Filename              string `json:"filename"`
-	FormatFile            string `json:"format_file"`
-	OriginalSize          string `json:"original_size"`
-	CompressedSize        string `json:"compressed_size"`
-	CompressedDuration    string `json:"compressed_duration"`
-	SpaceSavingPercentage string `json:"space_saving_percentage"`
-	StartedAt             string `json:"started_at"`
-	FinishedAt            string `json:"finished_at"`
-	Timestamp             string `json:"timestamp"`
+	JobId                 string    `json:"job_id"`
+	TaskId                string    `json:"task_id"`
+	UserId                string    `json:"user_id"`
+	CompressionId         string    `json:"compression_id"`
+	MachineId             string    `json:"machine_id"`
+	CompressorId          string    `json:"compressor_id"`
+	Filename              string    `json:"filename"`
+	FormatFile            string    `json:"format_file"`
+	OriginalSize          string    `json:"original_size"`
+	CompressedSize        string    `json:"compressed_size"`
+	CompressedDuration    string    `json:"compressed_duration"`
+	SpaceSavingPercentage string    `json:"space_saving_percentage"`
+	StartedAt             time.Time `json:"started_at"`
+	FinishedAt            time.Time `json:"finished_at"`
+	Timestamp             time.Time `json:"timestamp"`
 }
 
 // {
